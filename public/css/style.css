@@ -1,0 +1,96 @@
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  /* vertical-align: bottom; */
+} /* ---- particles.js container ---- */
+#particles-js {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #030139;
+  background-image: url("https://images.unsplash.com/photo-1544506686-0e53885d4b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGNocmlzdG1hcyUyMHByZXNlbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  /* -webkit-user-select: auto; */
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+#sign-in-form {
+  font-family: "Signika", sans-serif;
+  margin-top: 80px;
+  padding: 10px;
+  color: White;
+  border: solid 3px rgb(181, 41, 41);
+  background-color: rgb(74, 71, 71);
+  /* box-shadow: 4px 4px 10px rgb(237, 225, 223); */
+}
+h1 {
+  background-color: darkolivegreen;
+  font-family: "Neonderthaw", cursive;
+  font-size: 120px !important;
+  color: white;
+
+  text-shadow: 2px 2px 2px rgb(240, 96, 96) !important;
+}
+header {
+  border-bottom: 5px solid rgb(181, 41, 41);
+  margin-bottom: 0;
+}
+
+#btn-sign-in {
+  background-color: rgb(181, 41, 41);
+  border-color: White;
+  min-width: 120px;
+  margin-bottom: 12px;
+}
+.btn-submit {
+  margin: 0;
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+}
+input {
+  border: 2px solid rgb(181, 41, 41) !important;
+}
+
+#or {
+  font-size: 18px;
+}
