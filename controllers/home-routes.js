@@ -3,6 +3,22 @@ const { User, List } = require('../models');
 
 
 router.get('/', async (req, res) => {
+
+    // res.status(200).json(userData)
+
+    // res.status(200).json(userData)
+    res.render('login'
+
+        // loggedIn: req.session.loggedIn,
+    );
+
+
+
+});
+
+
+
+router.get('/homepage', async (req, res) => {
     try {
 
         const userData = await User.findAll({
@@ -13,7 +29,7 @@ router.get('/', async (req, res) => {
             user.get({ plain: true })
         );
         // res.status(200).json(userData)
-        res.render('login', {
+        res.render('homepage', {
             users
             // loggedIn: req.session.loggedIn,
         });
