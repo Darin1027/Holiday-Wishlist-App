@@ -1,0 +1,17 @@
+[
+  {
+    "name": "laptop",
+    "description": "dell",
+    "user_id": 1
+  },
+  {
+    "name": "shirt",
+    "description": "gucci",
+    "user_id": 2
+  },
+  {
+    "name": "tv",
+    "description": "sony",
+    "user_id": 3
+  }
+]
