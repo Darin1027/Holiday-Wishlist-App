@@ -94,3 +94,15 @@ input {
 #or {
   font-size: 18px;
 }
+h5 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid white;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+h5 span {
+  background: rgb(74, 71, 71);
+  padding: 0 10px;
+}
