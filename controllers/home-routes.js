@@ -13,6 +13,17 @@ router.get("/", async (req, res) => {
   );
 });
 
+router.get("/signup", async (req, res) => {
+  // res.status(200).json(userData)
+
+  // res.status(200).json(userData)
+  res.render(
+    "signup"
+
+    // loggedIn: req.session.loggedIn,
+  );
+});
+
 // Login route
 router.get("/login", (req, res) => {
   // if (req.session.loggedIn) {
