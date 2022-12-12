@@ -51,7 +51,7 @@ canvas {
   border-radius: 0 0 3px 3px;
 }
 
-#sign-in-form {
+#sign-in-form, #signup-form {
   font-family: "Signika", sans-serif;
   margin-top: 80px;
   padding: 10px;

@@ -2,12 +2,13 @@
   <div class="row justify-content-center min-vh-100 m">
     <div class="col-5">
       <form class="form-control" id="sign-in-form">
+        {{! action="/api/users/login" method="POST"  }}
         <div class="mb-3">
           <p class="text-align-center">Sign in to update your list!</p>
           <input
             type="email"
             class="form-control rounded-pill"
-            id="exampleInputEmail1"
+            id="email-login"
             aria-describedby="emailHelp"
             placeholder="Email Address"
           />
@@ -17,7 +18,7 @@
           <input
             type="password"
             class="form-control rounded-pill"
-            id="exampleInputPassword1"
+            id="password-login"
             placeholder="Password"
           />
         </div>
@@ -44,3 +45,5 @@
     </div>
   </div>
 </div>
+
+<script src="./js/login.js"></script>
