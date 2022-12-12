@@ -1,57 +1,13 @@
 const router = require("express").Router();
 const { User, List } = require("../models");
-const { withAuth } = require("../utils/auth")
+const { withAuth } = require("../utils/auth");
 
-
-
-router.get('/', async (req, res) => {
-
+router.get("/", async (req, res) => {
   // res.status(200).json(userData)
-
-  // res.status(200).json(userData)
-  res.render('login'
-
-    // loggedIn: req.session.loggedIn,
-  );
-
-
-
-});
-
-// Login route
-// router.get('/login', withAuth, (req, res) => {
-//   // if (req.session.loggedIn) {
-//   res.redirect('/');
-//   // return;
-//   // }
-//   res.render('login');
-// });
-
-
-router.get('/homepage', async (req, res) => {
-  try {
-
-    const userData = await User.findAll({
-      include: [{ model: List }]
-    })
-    // res.status(200).json(userData)
-    const users = userData.map((user) =>
-      user.get({ plain: true })
-    );
-    // res.status(200).json(userData)
-    res.render('homepage', {
-      users
-      // loggedIn: req.session.loggedIn,
-    });
-  }
-  catch (err) {
-    res.status(400).json(err)
-  }
 
   // res.status(200).json(userData)
   res.render(
     "login"
-
 
     // loggedIn: req.session.loggedIn,
   );
@@ -64,13 +20,53 @@ router.get("/signup", async (req, res) => {
   res.render(
     "signup"
 
+    // loggedIn: req.session.loggedIn,
+  );
+});
 
-  )
+// Login route
+router.get("/login", (req, res) => {
+  // if (req.session.loggedIn) {
+  res.redirect("/");
+  // return;
+  // }
+  res.render("login");
+});
+
+router.get("/homepage", async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      include: [{ model: List }],
+    });
+    // res.status(200).json(userData)
+    const users = userData.map((user) => user.get({ plain: true }));
+    // res.status(200).json(userData)
+    res.render("homepage", {
+      users,
+      // loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+
+  // res.status(200).json(userData)
+  res.render(
+    "login"
+
+    // loggedIn: req.session.loggedIn,
+  );
+});
+
+router.get("/signup", async (req, res) => {
+  // res.status(200).json(userData)
+
+  // res.status(200).json(userData)
+  res.render("signup");
   try {
     const user = userData.get({ plain: true });
-    res.status(200).json(userData)
-    res.render('homepage', {
-      user
+    res.status(200).json(userData);
+    res.render("homepage", {
+      user,
       // loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -78,10 +74,7 @@ router.get("/signup", async (req, res) => {
   }
 
   // loggedIn: req.session.loggedIn,
-})
-
-
-
+});
 
 // router.get("/homepage", async (req, res) => {
 //   try {
