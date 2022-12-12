@@ -58,7 +58,7 @@
                                                 </div>
 
                                                 <form class="form-inline my-2 my-lg-0">
-                                                    <button class="btn btn-outline-success my-2 my-sm-0 float-right"
+                                                    <button class="btn btn-outline-success my-2 my-sm-0 float-right" id="addItem"
                                                         type="submit">Add</button>
                                                     <form class="form-inline my-2 my-lg-0">
                                                         <button class="btn btn-outline-success my-2 my-sm-0 float-right"
@@ -66,7 +66,7 @@
                                                     </form>
                                                 </form>
 
-                                                <table class="table mb-4">
+                                                <table class="table mb-4" >
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">No.</th>
@@ -74,35 +74,11 @@
                                                             <th scope="col">Actions</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>Item 1</td>
-                                                            <td>
-                                                                <button type="submit"
-                                                                    class="btn btn-danger">Delete</button>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Item 2</td>
-                                                            <td>
-                                                                <button type="submit"
-                                                                    class="btn btn-danger">Delete</button>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Item 3</td>
-
-                                                            <td>
-                                                                <button type="submit"
-                                                                    class="btn btn-danger">Delete</button>
-
-                                                            </td>
-                                                        </tr>
+                                                    <tbody id="listTable">
+                                                        {{#each lists as |list|}}
+                                                        {{> renderList}}
+                                                        {{/each}}
+                                                        
                                                     </tbody>
                                                 </table>
 
