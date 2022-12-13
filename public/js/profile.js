@@ -1,6 +1,6 @@
 const addItemHandler = async (event) => {
 
-    event.preventDefault();
+    // event.preventDefault();
 
     const name = document.getElementById('form1').value
     const response = await fetch('/api/list', {
@@ -11,6 +11,7 @@ const addItemHandler = async (event) => {
 
     if (response.ok) {
         // document.location.replace('/profile');
+        window.location.reload();
     } else {
         alert('Failed to log out.');
     }
@@ -18,7 +19,7 @@ const addItemHandler = async (event) => {
 
 const deleteItemHandler = async (event) => {
 
-    event.preventDefault();
+    // event.preventDefault();
     console.log(event.target.dataset.id)
 
     if (event.target.dataset.id) {
@@ -30,6 +31,7 @@ const deleteItemHandler = async (event) => {
         });
 
         if (response.ok) {
+            window.location.reload();
             // document.location.replace('/profile');
         } else {
             alert('Failed to log out.');
