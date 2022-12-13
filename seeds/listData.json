@@ -1,17 +1,92 @@
 [
   {
-    "name": "laptop",
-    "description": "dell",
+    "name": "Laptop",
+    "description": "Dell",
     "user_id": 1
   },
   {
-    "name": "shirt",
-    "description": "gucci",
+    "name": "Shirts",
+    "description": "Gucci",
     "user_id": 2
   },
   {
-    "name": "tv",
-    "description": "sony",
+    "name": "TV",
+    "description": "Sony",
     "user_id": 3
+  },
+  {
+    "name": "Shoes",
+    "description": "Comfy",
+    "user_id": 4
+  },
+  {
+    "name": "Basketball",
+    "description": "Bouncy",
+    "user_id": 5
+  },
+  {
+    "name": "BBQ",
+    "description": "Smoky",
+    "user_id": 6
+  },
+  {
+    "name": "Hats",
+    "description": "Messy hair",
+    "user_id": 7
+  },
+  {
+    "name": "Backpack",
+    "description": "Storage",
+    "user_id": 8
+  },
+  {
+    "name": "DVD player",
+    "description": "Outdated",
+    "user_id": 9
+  },
+  {
+    "name": "iPod",
+    "description": "Shuffles are cool",
+    "user_id": 1
+  },
+  {
+    "name": "Batteries",
+    "description": "Power",
+    "user_id": 2
+  },
+  {
+    "name": "Magnets",
+    "description": "Stick together",
+    "user_id": 3
+  },
+  {
+    "name": "Baby Powder",
+    "description": "Stay fresh",
+    "user_id": 4
+  },
+  {
+    "name": "Cooking Pots",
+    "description": "Mmmmm",
+    "user_id": 5
+  },
+  {
+    "name": "Hungry Hungry Hippo",
+    "description": "So fun",
+    "user_id": 6
+  },
+  {
+    "name": "Sun Glasses",
+    "description": "Too cool",
+    "user_id": 7
+  },
+  {
+    "name": "Gloves",
+    "description": "Stay warm",
+    "user_id": 8
+  },
+  {
+    "name": "Water Gun",
+    "description": "Hands up!",
+    "user_id": 9
   }
 ]

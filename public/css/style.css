@@ -120,3 +120,25 @@ h5 span {
   text-shadow: 2px 2px 5px rgb(25, 39, 2);
   padding: 5px;
 }
+
+.friend {
+  font-size: 20px;
+  font-family: "Signika", sans-serif;
+  color: white;
+  background-color: rgb(74, 71, 71);
+  border: 2px solid rgb(181, 41, 41);
+}
+
+.friendList {
+  font-family: "Signika", sans-serif;
+  text-shadow: 1px 1px 10px lightgreen;
+  /* border: 2px solid white; */
+  color: white;
+  background-color: rgb(74, 71, 71);
+}
+
+.friendImg {
+  border: 2px solid white;
+  margin-top: 12px;
+  box-shadow: 2px 2px 6px lightgreen;
+}
