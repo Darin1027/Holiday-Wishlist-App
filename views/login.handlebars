@@ -8,7 +8,7 @@
           <input
             type="email"
             class="form-control rounded-pill"
-            id="exampleInputEmail1"
+            id="email-login"
             aria-describedby="emailHelp"
             placeholder="Email Address"
           />
@@ -18,7 +18,7 @@
           <input
             type="password"
             class="form-control rounded-pill"
-            id="exampleInputPassword1"
+            id="password-login"
             placeholder="Password"
           />
         </div>
@@ -34,9 +34,10 @@
         <h5><span> Not a member yet?</span></h5>
         <div class="btn-submit">
           <button
+            onclick="location.href = 'http://localhost:3001/signup'"
             type="submit"
             class="btn btn-success rounded-pill width-100"
-            id="btn-sign-in"
+            id="btn-sign-up"
           >
             Create an Account!
           </button>
@@ -46,4 +47,4 @@
   </div>
 </div>
 
-{{! <script src="./js/login.js"></script> }}
+<script src="./js/login.js"></script>

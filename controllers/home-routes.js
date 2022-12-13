@@ -1,104 +1,59 @@
 const router = require("express").Router();
 const { User, List } = require("../models");
-const { withAuth } = require("../utils/auth")
+const { withAuth } = require("../utils/auth");
 
-
-
-router.get('/', async (req, res) => {
-
+router.get("/", async (req, res) => {
   // res.status(200).json(userData)
-
-  // res.status(200).json(userData)
-  res.render('login'
-
-    // loggedIn: req.session.loggedIn,
-  );
-
-
-
-});
-
-// Login route
-// router.get('/login', withAuth, (req, res) => {
-//   // if (req.session.loggedIn) {
-//   res.redirect('/');
-//   // return;
-//   // }
-//   res.render('login');
-// });
-
-
-router.get('/homepage', async (req, res) => {
-  try {
-
-    const userData = await User.findAll({
-      include: [{ model: List }]
-    })
-    // res.status(200).json(userData)
-    const users = userData.map((user) =>
-      user.get({ plain: true })
-    );
-    // res.status(200).json(userData)
-    res.render('homepage', {
-      users
-      // loggedIn: req.session.loggedIn,
-    });
-  }
-  catch (err) {
-    res.status(400).json(err)
-  }
 
   // res.status(200).json(userData)
   res.render(
     "login"
 
-
     // loggedIn: req.session.loggedIn,
   );
 });
 
-router.get("/signup", async (req, res) => {
-  // res.status(200).json(userData)
+router.get("/profile", async (req, res) => {
 
-  // res.status(200).json(userData)
-  res.render(
-    "signup"
-
-
-  )
   try {
-    const user = userData.get({ plain: true });
-    res.status(200).json(userData)
-    res.render('homepage', {
-      user
-      // loggedIn: req.session.loggedIn,
+
+    const listdata = await List.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
+
+    })
+    const allUserData = await User.findAll()
+    const users = allUserData.map((user) =>
+      user.get({ plain: true })
+    );
+    console.log(users)
+
+    const lists = listdata.map((list) =>
+      list.get({ plain: true })
+    );
+    // res.status(200).json(listdata)
+    res.render('profile', {
+      lists, users
+
     });
-  } catch (err) {
-    res.status(500).json(err);
+    // res.render('profile', {
+
+
+    // });
+    // res.status(200).json(listdata)
+  }
+  catch (err) {
+    res.status(400).json(err)
   }
 
-  // loggedIn: req.session.loggedIn,
-})
+});
 
 
 
 
-// router.get("/homepage", async (req, res) => {
-//   try {
-//     const userData = await User.findAll({
-//       include: [{ model: List }],
-//     });
-//     // res.status(200).json(userData)
-//     const users = userData.map((user) => user.get({ plain: true }));
-//     // res.status(200).json(userData)
-//     res.render("homepage", {
-//       users,
-//       // loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+
+
 
 router.get("/:id", async (req, res) => {
   try {
@@ -119,41 +74,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// router.get('/', async (req, res) => {
-//     try {
 
-//         const listdata = await List.findAll({
-
-//         })
-//         const lists = listdata.map((user) =>
-//             user.get({ plain: true })
-//         );
-//         // res.status(200).json(listdata)
-//         res.render('homepage', {
-//             lists
-//             // loggedIn: req.session.loggedIn,
-//         });
-//         // res.status(200).json(listdata)
-//     }
-//     catch (err) {
-//         res.status(400).json(err)
-//     }
-
-// });
-
-// router.get('/:id', async (req, res) => {
-//     try {
-//         const listdata = await List.findByPk(req.params.id)
-//         const list = listdata.get({ plain: true });
-//         // res.status(200).json(list)
-//         res.render('homepage', {
-//             list
-//             // loggedIn: req.session.loggedIn,
-//         });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-
-// });
 
 module.exports = router;

@@ -1,9 +1,8 @@
-const router = require('express').Router();
-const { User, List } = require('../../models');
-
+const router = require("express").Router();
+const { User, List } = require("../../models");
 
 // Login
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
     try {
         const userData = await User.findOne({
             where: {
@@ -11,28 +10,22 @@ router.post('/login', async (req, res) => {
             },
         });
 
-        // if (!userData) {
-        //     res
-        //         .status(400)
-        //         .json({ message: 'Incorrect email or password. Please try again!' });
-        //     return;
-        // }
-
         const validPassword = await userData.checkPassword(req.body.password);
 
-        if (!validPassword) {
+        if (!validPassword || !userData.email) {
             res
                 .status(400)
-                .json({ message: 'Incorrect email or password. Please try again!' });
+                .json({ message: "Incorrect email or password. Please try again!" });
             return;
         }
 
         req.session.save(() => {
             req.session.loggedIn = true;
+            req.session.user_id = userData.id;
 
             res
                 .status(200)
-                .json({ user: userData, message: 'You are now logged in!' });
+                .json({ user: userData, message: "You are now logged in!" });
         });
     } catch (err) {
         console.log(err);
@@ -40,42 +33,41 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
     try {
-        const userData = await User.create(req.body)
+        const userData = await User.create(req.body);
 
+        req.session.save(() => {
+            console.log("should happen 1st");
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+            res.status(200).json(userData);
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+router.put("/:id", async (req, res) => {
+    try {
+        const userData = await User.update(req.body, {
+            where: {
+                id: req.params.id,
+            },
+        });
         res.status(200).json(userData);
     } catch (err) {
         res.status(400).json(err);
     }
-
 });
 
-router.put('/:id', async (req, res) => {
-    try {
-        const userData = await User.update(req.body,
-            {
-                where: {
-                    id: req.params.id
-                }
-            }
-
-        )
-        res.status(200).json(userData);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-
-});
-
-
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
     try {
         const userData = await User.destroy({
             where: {
-                id: req.params.id
-            }
-        })
+                id: req.params.id,
+            },
+        });
         res.status(200).json(userData);
     } catch (err) {
         res.status(400).json(err);
@@ -83,7 +75,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 // Logout
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
