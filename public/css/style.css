@@ -132,7 +132,7 @@ h5 span {
 .friendList {
   font-family: "Signika", sans-serif;
   text-shadow: 1px 1px 10px lightgreen;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   color: white;
   background-color: rgb(74, 71, 71);
 }
