@@ -17,7 +17,8 @@ const signupFormHandler = async (event) => {
     });
     // if response is ok the user is redirected to / route
     if (response.ok) {
-      document.location.replace("/");
+      console.log("should happen 2nd");
+      document.location.replace("/profile");
     } else {
       alert("Failed to sign up.");
     }
