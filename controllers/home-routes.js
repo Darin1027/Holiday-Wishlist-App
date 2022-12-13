@@ -13,6 +13,25 @@ router.get("/", async (req, res) => {
   );
 });
 
+router.get("/profile", async (req, res) => {
+  try {
+    console.log("should happen 3rd");
+    const listdata = await List.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const lists = listdata.map((user) => user.get({ plain: true }));
+    // res.status(200).json(listdata)
+    res.render("profile", {
+      lists,
+      // loggedIn: req.session.loggedIn,
+    });
+    // res.status(200).json(listdata)
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 router.get("/signup", async (req, res) => {
   // res.status(200).json(userData)
 

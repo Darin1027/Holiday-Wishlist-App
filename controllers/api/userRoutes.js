@@ -9,17 +9,10 @@ router.post("/login", async (req, res) => {
         email: req.body.email,
       },
     });
-    console.log("Hello");
-    // if (!userData) {
-    //     res
-    //         .status(400)
-    //         .json({ message: 'Incorrect email or password. Please try again!' });
-    //     return;
-    // }
 
     const validPassword = await userData.checkPassword(req.body.password);
 
-    if (!validPassword) {
+    if (!validPassword || !userData.email) {
       res
         .status(400)
         .json({ message: "Incorrect email or password. Please try again!" });
@@ -28,6 +21,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = userData.id;
 
       res
         .status(200)
@@ -44,10 +38,11 @@ router.post("/", async (req, res) => {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
+      console.log("should happen 1st");
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+      res.status(200).json(userData);
     });
-    res.status(200).json(userData);
   } catch (err) {
     res.status(400).json(err);
   }
