@@ -1,19 +1,18 @@
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Lists<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="#">Logout</a>
     </div>
   </div>
 </nav>
 
 
-    <!-- particles.js container -->
+ <!-- particles.js container -->
     <div id="particles-js"></div>
     <!-- stats - count particles -->
     <!-- <div class="count-particles">
@@ -51,52 +50,26 @@
               <div class="col-12">
                 <div class="form-outline">
                   <input type="text" id="form1" class="form-control" />
-                  <label class="form-label" for="form1">Enter an item here</label>
                 </div>
               </div>
-
-                <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0 float-right" type="submit" id="addItem" >Add</button>
-            </form>
 
             <table class="table mb-4">
               <thead>
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">Wishlist Item</th>
-                  <th scope="col">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
                   <td>Item 1</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
 
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Item 2</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
 
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Item 3</td>
-
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-
-                  </td>
-                </tr>
-                <tbody id="listTable">
+                {{!-- <tbody id="listTable">
                     {{#each lists as |list|}}
                     {{> renderList}}
-                    {{/each}}
+                    {{/each}} --}}
 
               </tbody>
             </table>
