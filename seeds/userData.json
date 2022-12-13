@@ -13,5 +13,41 @@
     "username": "Amiko",
     "email": "amiko2k20@aol.com",
     "password": "password12345"
+  },
+  {
+    "username": "Magneto",
+    "email": "Magneto@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Gambit",
+    "email": "Magneto@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Cyclops",
+    "email": "Cyclops@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Wolverine",
+    "email": "Wolverine@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Jubilee",
+    "email": "Jubilee@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Storm",
+    "email": "Storm@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Xavier",
+    "email": "Xavier@aol.com",
+    "password": "password12345"
   }
 ]
+
