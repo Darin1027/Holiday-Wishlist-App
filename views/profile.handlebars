@@ -1,5 +1,9 @@
 
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
   <a class="navbar-brand" href="#">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,6 +18,7 @@
 
 
     <!-- particles.js container -->
+
     <div id="particles-js"></div>
     <!-- stats - count particles -->
     <!-- <div class="count-particles">
@@ -29,6 +34,41 @@
                     <p class="card-text">Click on a Friend to see what they want for Christmas!</p>
                 </div>
                 <ul class="list-group list-group-flush">
+
+<div id="particles-js"></div>
+    <!-- stats - count particles -->
+    <!-- <div class="count-particles">
+      <span class="js-count-particles">--</span> particles -->
+    <div class="container ">
+        <div class="row ">
+            <div class="card mt-2 friend" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNocmlzdG1hc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+                    class="card-img-top friendImg" alt="...">
+
+                    <div class="mb-3">
+          <input
+            type="text"
+            class="form-control rounded-pill mt-3"
+            id="friend-search"
+            placeholder="Search for friend"
+          />
+        </div>
+
+         <div class="btn-submit">
+          <button
+            type="submit"
+            class="btn btn-success rounded-pill width-100"
+            id="btn-sign-in"
+          >
+            + Add to list
+          </button>
+        </div>
+                <div class="card-body friendList">
+                    <h3 class="card-title text-center">Friends List:</h3>
+                    
+                </div>
+                <ul class="list-group list-group-flush friendList">
+
                     {{#each users as |user|}}
                     {{> userList}}
                     {{/each}}
@@ -47,6 +87,7 @@
 
             <h4 class="text-center my-3 pb-3">Most Wanted!!</h4>
 
+
             <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
               <div class="col-12">
                 <div class="form-outline">
@@ -56,7 +97,7 @@
               </div>
 
                 <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0 float-right" type="submit" id="addItem" >Add</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 float-right" type="submit" id="addItem">Add</button>
             </form>
 
             <table class="table mb-4">
@@ -67,32 +108,6 @@
                   <th scope="col">Actions</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Item 1</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Item 2</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Item 3</td>
-
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-
-                  </td>
-                </tr>
                 <tbody id="listTable">
                     {{#each lists as |list|}}
                     {{> renderList}}
@@ -101,6 +116,7 @@
               </tbody>
             </table>
 
+
           </div>
         </div>
       </div>
@@ -108,3 +124,5 @@
   </div>
 </section>
 <script src="./js/profile.js"></script>
+
+<script src="./js/logout.js"></script>
