@@ -68,13 +68,13 @@ var x = setInterval(function () {
   document.getElementById("countdown").innerHTML =
     "🎄 " +
     days +
-    "-Days  " +
+    " Days  - " +
     hours +
-    "-Hours  " +
+    " Hours  - " +
     minutes +
-    "-Min  " +
+    " Minutes  - " +
     seconds +
-    "-Sec  Until Christmas! 🎄";
+    " Seconds  Until Christmas! 🎄";
   if (t < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Christmas is Here!!";
