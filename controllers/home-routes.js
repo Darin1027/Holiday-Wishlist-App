@@ -13,47 +13,38 @@ router.get("/", async (req, res) => {
   );
 });
 
+router.get("/signup", async (req, res) => {
+  // res.status(200).json(userData)
+  // res.status(200).json(userData)
+  res.render("signup");
+});
+
 router.get("/profile", async (req, res) => {
-
   try {
-
+    console.log("should happen 3rd");
     const listdata = await List.findAll({
       where: {
-        user_id: req.session.user_id
-      }
+        user_id: req.session.user_id,
+      },
+    });
+    const allUserData = await User.findAll();
+    const users = allUserData.map((user) => user.get({ plain: true }));
+    console.log(users);
 
-    })
-    const allUserData = await User.findAll()
-    const users = allUserData.map((user) =>
-      user.get({ plain: true })
-    );
-    console.log(users)
-
-    const lists = listdata.map((list) =>
-      list.get({ plain: true })
-    );
+    const lists = listdata.map((list) => list.get({ plain: true }));
     // res.status(200).json(listdata)
-    res.render('profile', {
-      lists, users
-
+    res.render("profile", {
+      lists,
+      users,
     });
     // res.render('profile', {
 
-
     // });
     // res.status(200).json(listdata)
+  } catch (err) {
+    res.status(400).json(err);
   }
-  catch (err) {
-    res.status(400).json(err)
-  }
-
 });
-
-
-
-
-
-
 
 router.get("/:id", async (req, res) => {
   try {
@@ -73,7 +64,5 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;
