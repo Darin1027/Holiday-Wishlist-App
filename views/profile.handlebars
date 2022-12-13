@@ -23,10 +23,13 @@
                 <p class="card-text">Click on a Friend to see what they want for Christmas!</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Darin</li>
+            {{#each users as |user|}}
+            {{> userList}}
+            {{/each}}
+                {{!-- <li class="list-group-item">Darin</li>
                 <li class="list-group-item">Sid</li>
                 <li class="list-group-item">Nicolette</li>
-                <li class="list-group-item">Kevin</li>
+                <li class="list-group-item">Kevin</li> --}}
             </ul>
             <div class="card-body">
                 <!-- <a href="#" class="card-link">Card link</a>
@@ -60,10 +63,7 @@
                                                 <form class="form-inline my-2 my-lg-0">
                                                     <button class="btn btn-outline-success my-2 my-sm-0 float-right" id="addItem"
                                                         type="submit">Add</button>
-                                                    <form class="form-inline my-2 my-lg-0">
-                                                        <button class="btn btn-outline-success my-2 my-sm-0 float-right"
-                                                            type="submit">Save</button>
-                                                    </form>
+
                                                 </form>
 
                                                 <table class="table mb-4" >
