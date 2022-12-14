@@ -13,63 +13,55 @@ router.get("/", async (req, res) => {
   );
 });
 
-router.get("/friends/:id", async (req, res) => {
+router.get("/signup", async (req, res) => {
+  // res.status(200).json(userData)
+
+  // res.status(200).json(userData)
+  res.render(
+    "signup"
+
+    // loggedIn: req.session.loggedIn,
+  );
+});
+
+router.get("/friends", async (req, res) => {
+  // router.get("/friends/:id", async (req, res) => {
   try {
     const listData = await List.findAll({
       where: {
-        user_id: req.params.id
-      }
-    })
-    const lists = listData.map((list) =>
-      list.get({ plain: true })
-    )
-    res.render(
-      "friends", { lists }
-
-    );
-  }
-  catch (err) {
-
-  }
+        user_id: req.query.id,
+      },
+    });
+    const lists = listData.map((list) => list.get({ plain: true }));
+    res.render("friends", { lists });
+  } catch (err) {}
 });
 
-
 router.get("/profile", async (req, res) => {
-
   try {
-
     const listdata = await List.findAll({
       where: {
-        user_id: req.session.user_id
-      }
+        user_id: req.session.user_id,
+      },
+    });
+    const allUserData = await User.findAll();
+    const users = allUserData.map((user) => user.get({ plain: true }));
+    console.log(users);
 
-    })
-    const allUserData = await User.findAll()
-    const users = allUserData.map((user) =>
-      user.get({ plain: true })
-    );
-    console.log(users)
-
-    const lists = listdata.map((list) =>
-      list.get({ plain: true })
-    );
+    const lists = listdata.map((list) => list.get({ plain: true }));
     // res.status(200).json(listdata)
-    res.render('profile', {
-      lists, users
-
+    res.render("profile", {
+      lists,
+      users,
     });
     // res.render('profile', {
 
-
     // });
     // res.status(200).json(listdata)
+  } catch (err) {
+    res.status(400).json(err);
   }
-  catch (err) {
-    res.status(400).json(err)
-  }
-
 });
-
 
 // Login route
 router.get("/login", (req, res) => {
@@ -79,10 +71,6 @@ router.get("/login", (req, res) => {
   // }
   res.render("login");
 });
-
-
-
-
 
 router.get("/:id", async (req, res) => {
   try {

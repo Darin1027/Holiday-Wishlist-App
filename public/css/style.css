@@ -122,11 +122,12 @@ h5 span {
 }
 
 .friend {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Signika", sans-serif;
   color: white;
   background-color: rgb(74, 71, 71);
   border: 2px solid rgb(181, 41, 41);
+  margin-top: 3px;
 }
 
 .friendList {
@@ -141,4 +142,35 @@ h5 span {
   border: 2px solid white;
   margin-top: 12px;
   box-shadow: 2px 2px 6px lightgreen;
+}
+
+.nav {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Signika", sans-serif;
+  margin-left: 10px;
+  color: rgb(181, 41, 41);
+  text-shadow: 2px 2px 6px darkolivegreen;
+}
+
+.wishlist {
+  font-family: "Signika", sans-serif;
+  border: 5px solid rgb(181, 41, 41);
+  min-height: 500px;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+
+.friendParent {
+  margin-top: 35px;
+}
+
+.btn-friend {
+  max-height: 30px;
+  vertical-align: middle;
+}
+
+.navbar {
+  border-bottom: 3px solid rgb(181, 41, 41);
+  border-top: 3px solid rgb(181, 41, 41);
 }
