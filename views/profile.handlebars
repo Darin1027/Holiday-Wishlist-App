@@ -6,20 +6,20 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       
-      <div class="nav-item nav-link nav" id="logout">Logout</div>
+      <a class="nav-item nav-link nav" href="#" id="logout">Logout</a>
     </div>
   </div>
 </nav>
 
 
     <!-- particles.js container -->
-<div id="particles-js"></div>
+            <div id="particles-js"></div>
     <!-- stats - count particles -->
     <!-- <div class="count-particles">
       <span class="js-count-particles">--</span> particles -->
-    <div class="container friendParent">
+     <div class="container friendParent">
         <div class="row ">
-            <div class="card friend" style="width: 18rem;">
+            <div class="card friend" style="width: 16rem;">
                 <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNocmlzdG1hc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
                     class="card-img-top friendImg" alt="...">
 
@@ -42,7 +42,7 @@
           </button>
         </div>
                 <div class="card-body friendList">
-                    <h3 class="card-title text-center">Friends List:</h3>
+                    <h4 class="card-title text-center">Friends List:</h4>
                     
                 </div>
                 <ul class="list-group list-group-flush friendList">
@@ -67,15 +67,23 @@
             <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
               <div class="col-12">
                 <div class="form-outline">
-                  <input type="text" id="form1" class="form-control" />
-                  <label class="form-label" for="form1">Enter an item here</label>
+                  <input type="text" id="form1" class="form-control" placeholder="Enter an item here"/>
+                 
                 </div>
               </div>
 
-                <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0 float-right" type="submit" id="addItem">Add</button>
-            </form>
+               <form class="row row-cols-lg-auto  justify-content-center align-items-center mb-4 pb-2">
+              <div class="col-12">
+                <div class="form-outline">
+                  <input type="text" id="form1" class="form-control" placeholder="Add description here"/>
+                  
+                </div>
+              </div>
 
+                <form class="form-inline">
+                <button class="btn btn-outline-success   float-right" type="submit" id="addItem">Add</button>
+            </form>
+{{!-- my-lg-0 --}}
             <table class="table mb-4">
               <thead>
                 <tr>
