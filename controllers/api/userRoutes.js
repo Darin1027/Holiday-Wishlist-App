@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       console.log("should happen 1st");
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -76,12 +76,15 @@ router.delete("/:id", async (req, res) => {
 
 // Logout
 router.post("/logout", (req, res) => {
+  console.log("==========");
+  console.log(req.session);
+  console.log("========");
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
   } else {
-    res.status(404).end();
+    res.status(500).end();
   }
 });
 
