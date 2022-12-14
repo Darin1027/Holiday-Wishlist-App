@@ -62,8 +62,6 @@ const deleteItemHandler = async (event) => {
 };
 
 
-
-
 document.querySelector('#addItem').addEventListener('click', addItemHandler);
 // document.querySelector('#deleteItem').addEventListener('click', deleteItemHandler);
 document.body.addEventListener('click', deleteItemHandler)
