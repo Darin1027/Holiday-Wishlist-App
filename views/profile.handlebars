@@ -6,25 +6,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      
       <a class="nav-item nav-link nav" href="#" id="logout">Logout</a>
     </div>
   </div>
 </nav>
 
+  <div id="particles-js"></div>
 
-    <!-- particles.js container -->
-            <div id="particles-js"></div>
-    <!-- stats - count particles -->
-    <!-- <div class="count-particles">
-      <span class="js-count-particles">--</span> particles -->
-     <div class="container friendParent">
-        <div class="row ">
-            <div class="card friend" style="width: 16rem;">
-                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNocmlzdG1hc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+  <div class="container friendParent">
+    <div class="row ">
+      <div class="card friend" style="width: 16rem;">
+        <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNocmlzdG1hc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
                     class="card-img-top friendImg" alt="...">
-
-                    <div class="mb-3">
+        <div class="mb-3">
           <input
             type="text"
             class="form-control rounded-pill mt-3"
@@ -32,8 +26,7 @@
             placeholder="Search for friend"
           />
         </div>
-
-         <div class="btn-submit">
+        <div class="btn-submit">
           <button
             type="submit"
             class="btn btn-success rounded-pill width-100"
@@ -42,70 +35,52 @@
             + Add to list
           </button>
         </div>
-                <div class="card-body friendList">
-                    <h4 class="card-title text-center">Friends List:</h4>
-                    
-                </div>
-                <ul class="list-group list-group-flush friendList">
-                    {{#each users as |user|}}
-                    {{> userList}}
-                    {{/each}}
-                    <!-- <li class="list-group-item">Darin</li>
-                    <li class="list-group-item">Sid</li>
-                    <li class="list-group-item">Nicolette</li>
-                    <li class="list-group-item">Kevin</li> -->
-                </ul>
+        <div class="card-body friendList">
+          <h4 class="card-title text-center">Friends List:</h4>
+        </div>
+        <ul class="list-group list-group-flush friendList">
+            {{#each users as |user|}}
+            {{> userList}}
+            {{/each}}
+        </ul>
+    </div>
+  
+  <div class="col-5 mt-2 ">
+    <div class="card wishlist" style="width: 50rem;">
+        <div class="card-header">
+          </h3><span class="navbar-brand mb-0 h1 fs-2">My Wishlist</span></h3>
+          <ul class="list-group list-group-flush">
+          <h4 class="text-center my-3 pb-3">Most Wanted!!</h4>
+          <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+            <div class="col-12">
+              <div class="form-outline">
+                <input type="text" id="form1" class="form-control" placeholder="Enter an item here"/>
+              </div>
             </div>
-            <div class="col-5 mt-2 ">
-                <div class="card wishlist" style="width: 50rem;">
-            <div class="col-5 mt-2 ">
-                <div class="card wishlist" style="width: 50rem;">
-                    <div class="card-header">
-                        </h3><span class="navbar-brand mb-0 h1 fs-2">My Wishlist</span></h3>
-                    <ul class="list-group list-group-flush">
-
-
-            <h4 class="text-center my-3 pb-3">Most Wanted!!</h4>
-
-            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
-              <div class="col-12">
-                <div class="form-outline">
-                  <input type="text" id="form1" class="form-control" placeholder="Enter an item here"/>
-                 
-                </div>
+          <form class="row row-cols-lg-auto  justify-content-center align-items-center mb-4 pb-2">
+            <div class="col-12">
+              <div class="form-outline">
+                <input type="text" id="form1" class="form-control" placeholder="Add description here"/>
               </div>
-
-               <form class="row row-cols-lg-auto  justify-content-center align-items-center mb-4 pb-2">
-              <div class="col-12">
-                <div class="form-outline">
-                  <input type="text" id="form1" class="form-control" placeholder="Add description here"/>
-                  
-                </div>
-              </div>
-
-                <form class="form-inline">
-                <button class="btn btn-outline-success   float-right" type="submit" id="addItem">Add</button>
-            </form>
-{{!-- my-lg-0 --}}
+            </div>
+          <form class="form-inline">
+              <button class="btn btn-outline-success   float-right" type="submit" id="addItem">Add</button>
+          </form>
             <table class="table mb-4">
               <thead>
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">Wishlist Item</th>
                   <th scope="col">Description</th>
-                  {{!-- <th scope="col">Actions</th> --}}
                   <th scope="col">Description</th>
-                  {{!-- <th scope="col">Actions</th> --}}
-                </tr>
+                  </tr>
               </thead>
                 <tbody id="listTable">
                     {{#each lists as |list|}}
                     {{> renderList}}
                     {{/each}}
-
-              </tbody>
+                </tbody>
             </table>
-
           </div>
         </div>
       </div>
