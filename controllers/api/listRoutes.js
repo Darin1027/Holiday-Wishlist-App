@@ -16,8 +16,10 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+    console.log(req.body)
     try {
-        const listdata = await List.update(req.body,
+        const [affectedRows] = await List.update(req.body,
+
             {
                 where: {
                     id: req.params.id
@@ -25,7 +27,12 @@ router.put('/:id', async (req, res) => {
             }
 
         )
-        res.status(200).json(listdata);
+        if (affectedRows > 0) {
+            res.status(200).end();
+        }
+        else {
+            res.status(404).end()
+        }
     } catch (err) {
         res.status(400).json(err);
     }
