@@ -28,9 +28,9 @@
                     <p class="card-text">Click on a Friend to see what they want for Christmas!</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    {{#each users as |user|}}
+                    {{!-- {{#each users as |user|}}
                     {{> userList}}
-                    {{/each}}
+                    {{/each}} --}}
                     <!-- <li class="list-group-item">Darin</li>
                     <li class="list-group-item">Sid</li>
                     <li class="list-group-item">Nicolette</li>
@@ -61,9 +61,11 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Item 1</td>
+              
+                   {{#each lists as |list|}}
+                    {{> renderFriends}}
+                    {{/each}}
+                  
 
 
                 {{!-- <tbody id="listTable">
