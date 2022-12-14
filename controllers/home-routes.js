@@ -15,10 +15,16 @@ router.get("/friends", async (req, res) => {
     const listData = await List.findAll({
       where: {
         user_id: req.query.id,
+        // user_id: req.query.id,
       },
     });
     const lists = listData.map((list) => list.get({ plain: true }));
-    res.render("friends", { lists });
+
+    const allUserData = await User.findAll();
+    const users = allUserData.map((user) => user.get({ plain: true }));
+    console.log(users);
+
+    res.render("friends", { lists, users });
   } catch (err) {}
 });
 
