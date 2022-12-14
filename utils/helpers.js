@@ -1,22 +1,10 @@
-app.engine(
-  "handlebars",
-  exphbs({
-    helpers: {
-      // Function to do basic mathematical operation in handlebar
-      math: function (lvalue, operator, rvalue) {
-        lvalue = parseFloat(lvalue);
-        rvalue = parseFloat(rvalue);
-        return {
-          "+": lvalue + rvalue,
-          "-": lvalue - rvalue,
-          "*": lvalue * rvalue,
-          "/": lvalue / rvalue,
-          "%": lvalue % rvalue,
-        }[operator];
-      },
-    },
-  })
-);
-app.set("view engine", "handlebars");
+module.exports = {
+    // the helper method 'format_time' will take in a timestamp and return a string with only the time
+    incremented: (index) => {
 
-module.exports = mathHelper;
+        return index++;
+    },
+
+};
+
+

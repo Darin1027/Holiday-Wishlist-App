@@ -24,17 +24,18 @@ router.get("/signup", async (req, res) => {
   );
 });
 
-router.get("/friends", async (req, res) => {
-  // router.get("/friends/:id", async (req, res) => {
+// router.get("/friends", async (req, res) => {
+router.get("/friends/:id/page", async (req, res) => {
   try {
     const listData = await List.findAll({
       where: {
-        user_id: req.query.id,
+        user_id: req.params.id,
+        // user_id: req.query.id,
       },
     });
     const lists = listData.map((list) => list.get({ plain: true }));
     res.render("friends", { lists });
-  } catch (err) {}
+  } catch (err) { }
 });
 
 router.get("/profile", async (req, res) => {
