@@ -1,18 +1,23 @@
-<table class="table mb-4">
+<tr>
+  <th scope="row">{{@index}}</th>
+  <td><input type="text" value="{{name}}" data-idName="{{id}}"></input></td>
+  <td> {{description}}</td>
+  <td>
+    <button
+      type="submit"
+      {{! id="deleteItem" }}
+      class="btn btn-danger"
+      data-id="{{id}}"
+    >Delete</button>
 
-  <tr>
-    <th scope="row">{{@index}}</th>
-    <td> {{name}}</td>
-    <td> {{description}}</td>
-    <td>
-      <button
-        type="submit"
-        {{! id="deleteItem" }}
-        class="btn btn-danger"
-        data-id="{{id}}"
-      >Delete</button>
+  </td>
+  <td>
+    <button
+      type="submit"
+      {{! id="deleteItem" }}
+      class="btn btn-danger"
+      data-idUpdate="{{id}}"
+    >update</button>
 
-    </td>
-  </tr>
-
-</table>
+  </td>
+</tr>
