@@ -11,11 +11,11 @@ canvas {
   z-index: -1;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: #030139;
   background-image: url("https://images.unsplash.com/photo-1544506686-0e53885d4b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGNocmlzdG1hcyUyMHByZXNlbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
-  opacity: 0.9;
-  background-repeat: no-repeat;
+  /* opacity: 0.9; */
+  background-repeat: repeat-y;
   background-size: cover;
   background-position: 50% 50%;
 } /* ---- stats.js ---- */
@@ -122,11 +122,12 @@ h5 span {
 }
 
 .friend {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Signika", sans-serif;
   color: white;
   background-color: rgb(74, 71, 71);
   border: 2px solid rgb(181, 41, 41);
+  margin-top: 3px;
   margin-top: 3px;
 }
 
@@ -149,15 +150,15 @@ h5 span {
   text-decoration: none;
   font-family: "Signika", sans-serif;
   margin-left: 10px;
-  color: rgb(181, 41, 41);
-  text-shadow: 2px 2px 6px darkolivegreen;
+  color: white;
+  text-shadow: 2px 2px 6px lightgreen;
 }
 
 .wishlist {
   font-family: "Signika", sans-serif;
-  border: 5px solid rgb(181, 41, 41);
+
   min-height: 500px;
-  margin-top: 70px;
+  /* margin-top: 25px; */
   margin-left: 30px;
 }
 
@@ -166,11 +167,13 @@ h5 span {
 }
 
 .btn-friend {
-  max-height: 30px;
+  max-height: 20px;
   vertical-align: middle;
+  font-size: 10px !important;
 }
 
 .navbar {
   border-bottom: 3px solid rgb(181, 41, 41);
   border-top: 3px solid rgb(181, 41, 41);
+  background-color: darkolivegreen !important;
 }
