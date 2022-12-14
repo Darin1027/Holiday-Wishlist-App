@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Home</a>
+  <a class="navbar-brand nav" href="#">My Wishlist</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Lists<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#" id="logout">Logout</a>
+      
+      <div class="nav-item nav-link nav" id="logout">Logout</div>
     </div>
   </div>
 </nav>
@@ -17,9 +17,9 @@
     <!-- stats - count particles -->
     <!-- <div class="count-particles">
       <span class="js-count-particles">--</span> particles -->
-    <div class="container ">
+    <div class="container friendParent">
         <div class="row ">
-            <div class="card mt-2 friend" style="width: 18rem;">
+            <div class="card friend" style="width: 18rem;">
                 <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNocmlzdG1hc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
                     class="card-img-top friendImg" alt="...">
 
@@ -55,8 +55,8 @@
                     <li class="list-group-item">Kevin</li> -->
                 </ul>
             </div>
-            <div class="col-5 mt-2">
-                <div class="card" style="width: 50rem;">
+            <div class="col-5 mt-2 ">
+                <div class="card wishlist" style="width: 50rem;">
                     <div class="card-header">
                         </h3><span class="navbar-brand mb-0 h1 fs-2">My Wishlist</span></h3>
                     <ul class="list-group list-group-flush">
@@ -81,7 +81,8 @@
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">Wishlist Item</th>
-                  <th scope="col">Actions</th>
+                  <th scope="col">Description</th>
+                  {{!-- <th scope="col">Actions</th> --}}
                 </tr>
               </thead>
                 <tbody id="listTable">
