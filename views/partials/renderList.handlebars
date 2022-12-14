@@ -1,7 +1,5 @@
 <tr>
-  <th scope="row">{{#each myArray}}
-        <span>{{mathHelper @index "+" 1}}</span>
-    {{/each}}</th>
+  <th scope="row">{{incremented @index}}</th>
   <td><input type="text" value="{{name}}" data-idName="{{id}}"></input></td>
   <td> {{description}}</td>
   <td>
