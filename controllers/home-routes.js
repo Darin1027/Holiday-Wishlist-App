@@ -56,9 +56,7 @@ router.get("/profile", withAuth, async (req, res) => {
     const allUserData = await User.findAll();
     const users = allUserData.map((user) => user.get({ plain: true }));
     console.log(users);
-
     const lists = listdata.map((list) => list.get({ plain: true }));
-
     res.render("profile", {
       lists,
       users,
@@ -74,7 +72,6 @@ router.get("/login", (req, res) => {
   res.redirect("/");
   res.render("login");
 });
-
 
 
 module.exports = router;
