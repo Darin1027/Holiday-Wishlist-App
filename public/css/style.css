@@ -177,3 +177,30 @@ h5 span {
   border-top: 3px solid rgb(181, 41, 41);
   background-color: darkolivegreen !important;
 }
+
+.navbar-toggler {
+  border-color: darkolivegreen;
+  box-shadow: 1px 1px 10px lightgreen;
+  background-color: white !important;
+}
+
+.btn:hover {
+  border-color: darkolivegreen;
+  opacity: 80%;
+  background-color: rgb(39, 124, 39);
+  transform: translateY(2px);
+}
+
+.btn-friend:hover {
+  border-color: darkolivegreen;
+  opacity: 80%;
+  background-color: rgb(181, 41, 41);
+  transform: translateY(2px);
+}
+
+/* @media screen and (max-width: 992px) {
+  .parent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+} */
