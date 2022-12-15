@@ -23,10 +23,24 @@ router.get("/friends", async (req, res) => {
     const allUserData = await User.findAll();
     const users = allUserData.map((user) => user.get({ plain: true }));
     console.log(users);
+    
+    console.log(req.query.id);
+    let currentFriend;
 
-    res.render("friends", { lists, users });
+    users.map((user) => {
+      console.log(user.username);
+      if (user.id == req.query.id) {
+        currentFriend = user;
+      }
+    });
+    console.log(currentFriend);
+
+    res.render("friends", { lists, users, currentFriend });
   } catch (err) {}
 });
+
+
+router.get("/friends/:id", async (req, res) => {});
 
 router.get("/profile", async (req, res) => {
   try {
@@ -49,6 +63,7 @@ router.get("/profile", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 // Login route
 router.get("/login", (req, res) => {
