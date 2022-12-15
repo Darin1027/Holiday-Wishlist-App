@@ -203,4 +203,7 @@ h5 span {
   h5 span {
     font-size: 14px;
   }
+  .wishlist {
+    width: 40rem !important;
+  }
 }
