@@ -159,12 +159,12 @@ h5 span {
 
   min-height: 500px;
   /* margin-top: 25px; */
-  margin-left: 30px;
+  margin-left: 200px;
 }
 
 .friendParent {
   margin-top: 35px;
-  margin-left: 75px;
+  margin-left: 100px;
 }
 
 .btn-friend {
@@ -199,11 +199,37 @@ h5 span {
   transform: translateY(2px);
 }
 
+@media screen and (max-width: 1390px) {
+  .wishlist {
+    width: 40rem !important;
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   h5 span {
     font-size: 14px;
   }
   .wishlist {
     width: 40rem !important;
+    margin-left: -190px;
+  }
+  .friendParent {
+    margin-top: 35px;
+    margin-left: 375px;
+  }
+  h1 {
+    font-size: 80px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wishlist {
+    width: 40rem !important;
+    margin-left: -200px;
+  }
+  .friendParent {
+    margin-top: 35px;
+    margin-left: 265px;
   }
 }
