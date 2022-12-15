@@ -1,21 +1,23 @@
 const router = require("express").Router();
 const { User, List } = require("../models");
-const { withAuth } = require("../utils/auth");
+const withAuth = require("../utils/auth");
 
+// landing page route
 router.get("/", async (req, res) => {
   res.render("login");
 });
 
+// singup route
 router.get("/signup", async (req, res) => {
   res.render("signup");
 });
 
-router.get("/friends", async (req, res) => {
+// Get all friends route
+router.get("/friends", withAuth, async (req, res) => {
   try {
     const listData = await List.findAll({
       where: {
         user_id: req.query.id,
-        // user_id: req.query.id,
       },
     });
     const lists = listData.map((list) => list.get({ plain: true }));
@@ -24,11 +26,27 @@ router.get("/friends", async (req, res) => {
     const users = allUserData.map((user) => user.get({ plain: true }));
     console.log(users);
 
-    res.render("friends", { lists, users });
-  } catch (err) {}
+    console.log(req.query.id);
+    let currentFriend;
+
+    users.map((user) => {
+      console.log(user.username);
+      if (user.id == req.query.id) {
+        currentFriend = user;
+      }
+    });
+    console.log(currentFriend);
+
+    res.render("friends", { lists, users, currentFriend });
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
-router.get("/profile", async (req, res) => {
+// Friend route by id
+router.get("/friends/:id", async (req, res) => { });
+
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const listdata = await List.findAll({
       where: {
@@ -50,26 +68,13 @@ router.get("/profile", async (req, res) => {
   }
 });
 
+
 // Login route
 router.get("/login", (req, res) => {
   res.redirect("/");
   res.render("login");
 });
 
-router.get("/:id", async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id, {
-      include: [{ model: List }],
-    });
 
-    const user = userData.get({ plain: true });
-    res.status(200).json(userData);
-    res.render("homepage", {
-      user,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 module.exports = router;
