@@ -33,6 +33,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// create new user
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -48,7 +49,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-
+// delete user
 router.delete("/:id", async (req, res) => {
   try {
     const userData = await User.destroy({
@@ -64,9 +65,6 @@ router.delete("/:id", async (req, res) => {
 
 // Logout
 router.post("/logout", (req, res) => {
-  console.log("==========");
-  console.log(req.session);
-  console.log("========");
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
