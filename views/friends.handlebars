@@ -1,12 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand nav" href="#" id="myWishList">My Wishlist</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  {{!-- <a class="navbar-brand nav" href="#">My Wishlist</a>
+  <a class="nav-item nav-link nav" href="#" id="logout">Logout</a> --}}
+  <div class="container-fluid justify-content-center">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link nav" href="#">My Wishlist</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link nav" href="#" id="logout">Logout</a>
+      </li>
+    </ul>
     <div class="navbar-nav">
-      
-      <a class="nav-item nav-link nav" href="#" id="logout">Logout</a>
+    </div>  
     </div>
   </div>
 </nav>
@@ -25,7 +34,7 @@
                     class="card-img-top friendImg" alt="...">
 
                     <div class="mb-3">
-          <input
+          {{!-- <input
             type="text"
             class="form-control rounded-pill mt-3"
             id="friend-search"
@@ -40,7 +49,7 @@
             id="btn-sign-in"
           >
             + Add to list
-          </button>
+          </button> --}}
         </div>
                 <div class="card-body friendList">
                     <h4 class="card-title text-center">Friends List:</h4>
