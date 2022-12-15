@@ -25,9 +25,11 @@ router.get("/friends", withAuth, async (req, res) => {
     const allUserData = await User.findAll();
     const users = allUserData.map((user) => user.get({ plain: true }));
     console.log(users);
-
+    
     console.log(req.query.id);
     let currentFriend;
+
+   
 
     users.map((user) => {
       console.log(user.username);
