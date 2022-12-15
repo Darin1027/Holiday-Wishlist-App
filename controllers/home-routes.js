@@ -3,40 +3,44 @@ const { User, List } = require("../models");
 const { withAuth } = require("../utils/auth");
 
 router.get("/", async (req, res) => {
-  res.render(
-    "login"
-  );
+  res.render("login");
 });
 
 router.get("/signup", async (req, res) => {
-  res.render(
-    "signup"
-  );
+  res.render("signup");
 });
 
-
 router.get("/friends", async (req, res) => {
-
-
   try {
     const listData = await List.findAll({
       where: {
-        user_id: req.params.id,
+        user_id: req.query.id,
         // user_id: req.query.id,
       },
     });
     const lists = listData.map((list) => list.get({ plain: true }));
 
-
-
     const allUserData = await User.findAll();
     const users = allUserData.map((user) => user.get({ plain: true }));
     console.log(users);
+    
+    console.log(req.query.id);
+    let currentFriend;
 
-    res.render("friends", { lists, users });
+    users.map((user) => {
+      console.log(user.username);
+      if (user.id == req.query.id) {
+        currentFriend = user;
+      }
+    });
+    console.log(currentFriend);
 
-  } catch (err) { }
+    res.render("friends", { lists, users, currentFriend });
+  } catch (err) {}
 });
+
+
+router.get("/friends/:id", async (req, res) => {});
 
 router.get("/profile", async (req, res) => {
   try {
@@ -55,11 +59,11 @@ router.get("/profile", async (req, res) => {
       lists,
       users,
     });
-
   } catch (err) {
     res.status(400).json(err);
   }
 });
+
 
 // Login route
 router.get("/login", (req, res) => {
@@ -82,7 +86,5 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;
