@@ -164,6 +164,7 @@ h5 span {
 
 .friendParent {
   margin-top: 35px;
+  margin-left: 75px;
 }
 
 .btn-friend {
@@ -198,9 +199,8 @@ h5 span {
   transform: translateY(2px);
 }
 
-/* @media screen and (max-width: 992px) {
-  .parent {
-    flex-wrap: wrap;
-    justify-content: center;
+@media screen and (max-width: 992px) {
+  h5 span {
+    font-size: 14px;
   }
-} */
+}
