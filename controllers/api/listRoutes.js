@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { User, List } = require('../../models');
-// const { withAuth } = require("../../utils/auth");
 
 
+// create new item
 router.post('/', async (req, res) => {
     const body = req.body
     try {
@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
 
 });
 
+// update item
 router.put('/:id', async (req, res) => {
     console.log(req.body)
     try {
@@ -39,7 +40,7 @@ router.put('/:id', async (req, res) => {
 
 });
 
-
+// delete item
 router.delete('/:id', async (req, res) => {
     try {
         const listdata = await List.destroy({
