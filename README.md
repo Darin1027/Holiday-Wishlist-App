@@ -134,9 +134,11 @@ N/A
 
 ## Screenshots
 
-The following animation shows the application's functionality
+The following animations shows the application's functionality
 
-![Gif of Holiday wishlist”.](./public/images/holiday.gif)
+![Gif of Holiday wishlist”.](./public/images/login.gif)
+
+![Gif of Holiday wishlist”.](./public/images/singup.gif)
 
 ## Contributors:
 
