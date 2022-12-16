@@ -22,9 +22,6 @@ Focus on what matters when it comes to the holidays! What presents will I get???
 10. [ Resources. ](#resources)
 11. [ Links. ](#links)
 
-
-## Installation:
-
 ## Installation
 * Clone the repository using:
 ```
