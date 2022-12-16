@@ -93,7 +93,7 @@ mysql -u root -p
 DROP DATABASE IF EXISTS secert_santa_db;
 CREATE DATABASE secert_santa_db;
 ```
-```
+
 * After enter password run the below command to initiliaze the database
 ```
 SOURCE schema.sql || SOURCE seeds.sql
