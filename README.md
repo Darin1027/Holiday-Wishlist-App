@@ -143,17 +143,17 @@ The following animations shows the application's functionality
 
 * Erich Ebbinghaus [eebbinghaus@gmail.com] 
 * Siddharth Desai  [shdesai327@gmail.com] 
-* Nicolette Boggs  [eebbinghaus@gmail.com] 
+* Nicolette Boggs  [nrb1628@gmail.com] 
 * Kevin Tran       [eebbinghaus@gmail.com] 
-* Darin Palombo    [eebbinghaus@gmail.com] 
+* Darin Palombo    [dplb1027@gmail.com] 
 
 # Questions:
 
 Want to see more of my work? 
-* [Github Link](https://github.com/SHD327)
-* [Github Link]([https://github.com/SHD327](https://github.com/eebbinghaus))
+* [shd327](https://github.com/SHD327)
+* [Darin1027](https://github.com/eebbinghaus))
 * [Github Link](https://github.com/Darin1027)
-* [Github Link](https://github.com/NicoletteBoggs)
+* [NicoletteBoggs](https://github.com/NicoletteBoggs)
 <br/>
 Want to learn more please contact me at weDontWantYourEmails@notAnEmailAccount.com
 
