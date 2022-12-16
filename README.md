@@ -74,7 +74,7 @@ npm install sequelize
 
 Run the the best Holiday application by typing the following in the terminal:
 ```
-node index.js
+node server.js
 ```
 
 ## Usage:
