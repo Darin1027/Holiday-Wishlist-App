@@ -136,9 +136,11 @@ N/A
 
 The following animations shows the application's functionality
 
-![Gif of Holiday wishlist”.](./public/images/login.gif)
 
-![Gif of Holiday wishlist”.](./public/images/singup.gif)
+![Gif of Holiday wishlist”.](./public/img/login.gif)
+![Gif of Holiday wishlist”.](./public/img/signup.gif)
+![Gif of Holiday wishlist”.](./public/img/add_delete.gif)
+
 
 ## Contributors:
 
