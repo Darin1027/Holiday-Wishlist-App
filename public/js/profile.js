@@ -34,7 +34,7 @@ const deleteItemHandler = async (event) => {
             window.location.reload();
 
         } else {
-            alert('Failed to log out.');
+            alert('Failed to delete item.');
         }
     }
 
@@ -56,7 +56,7 @@ const deleteItemHandler = async (event) => {
                 window.location.reload();
 
             } else {
-                alert('Failed to log out.');
+                alert('Failed to update item.');
             }
 
         }
