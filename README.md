@@ -18,9 +18,9 @@ Focus on what matters when it comes to the holidays! What presents will I get???
 6. [ Tests. ](#tests)
 7. [ Questions. ](#questions)
 8. [ Screenshots. ](#screenshots)
-9. [ Resources. ](#resources)
-10. [ Links. ](#links)
-
+9. [ Contributors. ](#contributors)
+10. [ Resources. ](#resources)
+11. [ Links. ](#links)
 
 
 ## Installation:
@@ -77,7 +77,7 @@ npm install sequelize
 npm install sequelize
 ```
 
-Run the the best team profile generator by typing the following in the terminal:
+Run the the best Holiday application by typing the following in the terminal:
 ```
 node index.js
 ```
@@ -88,6 +88,7 @@ node index.js
 * Navigate to the working directory and open a terminal and run the below command
 ```
 mysql -u root -p
+```
 ```
 DROP DATABASE IF EXISTS secert_santa_db;
 CREATE DATABASE secert_santa_db;
@@ -133,15 +134,27 @@ N/A
 
 ## Screenshots
 
+The following animation shows the application's functionality
+
+![Gif of Holiday wishlist”.](./public/images/holiday.gif)
+
 ## Contributors:
 
-Erich Ebbinghaus, Siddharth Desai, Nicolette Boggs, Kevin Tran, Darin Palombo
+* Erich Ebbinghaus [eebbinghaus@gmail.com] 
+* Siddharth Desai  [shdesai327@gmail.com] 
+* Nicolette Boggs  [eebbinghaus@gmail.com] 
+* Kevin Tran       [eebbinghaus@gmail.com] 
+* Darin Palombo    [eebbinghaus@gmail.com] 
 
 # Questions:
 
-Want to see more of my work? [Github Link](https://github.com/SHD327)
+Want to see more of my work? 
+* [Github Link](https://github.com/SHD327)
+* [Github Link]([https://github.com/SHD327](https://github.com/eebbinghaus))
+* [Github Link](https://github.com/Darin1027)
+* [Github Link](https://github.com/NicoletteBoggs)
 <br/>
-Want to learn more please contact me at shdesai327@gmail.com
+Want to learn more please contact me at weDontWantYourEmails@notAnEmailAccount.com
 
 ## Contact Us:
 
@@ -149,7 +162,9 @@ weDontWantYourEmails@notAnEmailAccount.com
 
 ## Links
 
-https://github.com/Darin1027/Holiday-Wishlist-App
+* [Github Link](https://github.com/Darin1027/Holiday-Wishlist-App)
+* [Deployed Link](https://mighty-escarpment-72007.herokuapp.com/)
+
 
 ## Resources
 * https://www.npmjs.com/package/mysql2
