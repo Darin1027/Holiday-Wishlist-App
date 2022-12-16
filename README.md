@@ -146,14 +146,14 @@ The following animations shows the application's functionality
 * Erich Ebbinghaus [eebbinghaus@gmail.com] 
 * Siddharth Desai  [shdesai327@gmail.com] 
 * Nicolette Boggs  [nrb1628@gmail.com] 
-* Kevin Tran       [eebbinghaus@gmail.com] 
+* Kevin Tran       [kevinTran@gmail.com] 
 * Darin Palombo    [dplb1027@gmail.com] 
 
 # Questions:
 
 Want to see more of my work? 
 * [shd327](https://github.com/SHD327)
-* [Darin1027](https://github.com/eebbinghaus))
+* [Darin1027](https://github.com/eebbinghaus)
 * [Github Link](https://github.com/Darin1027)
 * [NicoletteBoggs](https://github.com/NicoletteBoggs)
 <br/>
