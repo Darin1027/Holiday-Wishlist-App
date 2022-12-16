@@ -8,8 +8,6 @@ Focus on what matters when it comes to the holidays! What presents will I get???
 - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-## Table of contents:
-
 ## Table of Contents
 1. [ Description. ](#description)
 2. [ Installation. ](#installation)
