@@ -17,8 +17,9 @@ Focus on what matters when it comes to the holidays! What presents will I get???
 7. [ Questions. ](#questions)
 8. [ Screenshots. ](#screenshots)
 9. [ Contributors. ](#contributors)
-10. [ Resources. ](#resources)
-11. [ Links. ](#links)
+10. [ Links. ](#links)
+11. [ Resources. ](#resources)
+
 
 ## Installation
 * Clone the repository using:
