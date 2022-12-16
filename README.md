@@ -131,11 +131,13 @@ N/A
 
 ## Screenshots
 
-The following animation shows the application's functionality
+The following animations shows the application's functionality
+
 
 ![Gif of Holiday wishlist”.](./public/img/login.gif)
 ![Gif of Holiday wishlist”.](./public/img/signup.gif)
 ![Gif of Holiday wishlist”.](./public/img/add_delete.gif)
+
 
 ## Contributors:
 
